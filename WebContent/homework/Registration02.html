@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration02.html</title>
+    <style>
+        table{margin: 5%;  box-sizing: border-box}
+        tr{height: 40px;}
+        td{font-weight: bold;}
+        input[type=text]{height: 30px; width: 400px;}
+        input[type=password]{height: 30px; width: 150px;}
+        .notice{font-size: 0.7em;}
+        .number{height: 35px; width: 100px;}
+        .selectinfo{font-size: 0.8em;}
+        form{display: inline;}
+        span{color:red}
+    </style>
+</head>
+<body>
+    <form>
+    <table border="1">
+        <tr style="border-bottom: blue;" class="start" >
+            <td colspan="3">*필수입력사항</td>
+        </tr>
+        <tr>
+            <td class="keypoint"><span>*</span>아이디</td>
+            <td>
+                <input type="text">
+                <input type="submit" value="중복확인">
+            </td>
+        </tr>
+        <tr class="notice">
+            <td></td>
+            <td colspan="2">※3~15자의 영문과 숫자만 가능합니다.</td>
+        </tr>
+        <tr>
+            <td class="keypoint"><span>*</span>비밀번호</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr class="notice">
+            <td></td>
+            <td>※영문/숫자/특수문자 조합 6~20자이상 입력해주세요.(아이디/전화번호사용 불가)
+                <br>
+                ※ 1234** 비밀번호는 홈페이지 사용에 제한됩니다.
+            </td>
+        </tr>
+        <tr>
+            <td class="keypoint"><span>*</span>비밀번호 확인</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr>
+            <td class="keypoint"><span>*</span>이름</td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td class="keypoint"><span>*</span>생년월일</td>
+            <td>
+               <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="keypoint"><span>*</span>주소</td>
+            <td>
+                <input type="text">
+                <input type="submit" value="우편번호찾기">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text">
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td class="keypoint"><span>*</span>이메일
+            <td>
+                <input type="text"> @ <input type="text">
+                <form>
+                    <select name="email">
+                        <option value="직접입력">직접입력</option>
+                        <option value="구글">gmail.com</option>
+                        <option value="네이버">naver.com</option>
+                        <option value="다음">daum.net</option>
+                        <option value="네이트">nate.com</option>
+                    </select>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td class="keypoint"><span>*</span>휴대폰번호</td>
+            <td>
+                <form>
+                    <select name="Number" class="number">
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="019">019</option>
+                    </select>&nbsp -
+                </form>
+            <input type="text" maxlength="4" width="150px">&nbsp -
+            <input type="text" maxlength="4" >
+            </td>
+        </tr>
+        <tr>
+            <td>전화번호</td>
+            <td>
+                <form>
+                    <select name="Number" class="number">
+                        <option value="서울">02</option>
+                        <option value="경기">031</option>
+                        <option value="부산">051</option>
+                        <option value="대구">053</option>
+                    </select>&nbsp -
+                </form>
+            <input type="text" maxlength="4" >&nbsp -
+            <input type="text" maxlength="4" >
+        </td>
+        </tr>
+        <tr>
+            <td>출판계약일</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>출판종료일</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>선택정보</td>
+            <td class="selectinfo">
+                <input type="checkbox" value="자바출판">자바출판
+                <input type="checkbox" value="반기획출판">반기획출판
+                <input type="checkbox" value="프리미엄출판">프리미엄출판
+                <input type="checkbox" value="출판컨설팅">출판컨설팅
+                <br>
+                <input type="checkbox" value="기획출판">기획출판
+                <input type="checkbox" value="미정">미정
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        </tr>
+</table>
+</form>
+</body>
+</html>
