@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        border-radius: 10px; border-spacing: 5px; background-color: #DDDDDD;
+        box-sizing: border-box; font-weight: bold;}
+    td {border-radius: 10px; width:100px; height: 50px;}
+    input {
+        border-radius: 10px; width: 100%; height:100%; font-weight: bold;
+        border:0; font-size: 20px; background:none; color: white;}
+    tr{background-color: #373737;}
+    td:last-child{background-color: #FA960A;}
+    .test>td{background-color: #7B7B7B;}
+</style>
+<body>
+    <h2>계산기</h2>
+    <table> 
+        <tr>
+            <td style="background-color: #70C738; text-align: right;
+             font-size: 40px; height: 80px;  padding-right: 3%;" colspan="4">123+654</td>
+        </tr>
+        <tr class="test">
+            <td colspan="2"><input type=button value="BackSpace"></td>
+            <td colspan="2"><input type=button value="C"></td>
+        </tr>
+        <tr>
+            <td><input type=button value="1"></td>
+            <td><input type=button value="2"></td>
+            <td><input type=button value="3"></td>
+            <td><input type=button value="/"></td>
+        </tr>
+        <tr>
+            <td><input type=button value="4"></td>
+            <td><input type=button value="5"></td>
+            <td><input type=button value="6"></td>
+            <td><input type=button value="x"></td>
+        </tr>
+        <tr>
+            <td><input type=button value="7"></td>
+            <td><input type=button value="8"></td>
+            <td><input type=button value="9"></td>
+            <td><input type=button value="+"></td>
+        </tr>
+        <tr>
+            <td><input type=button value="="></td>
+            <td><input type=button value="0"></td>
+            <td><input type=button value="."></td>
+            <td><input type=button value="-"></td>
+        </tr>
+    </table>
+</body>
+</html>

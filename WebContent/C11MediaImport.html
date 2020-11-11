@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C11MediaImport.html</title>
+</head>
+<style>
+    /* 
+    @import
+    -<link>태그를 대체할수 있다.
+    -style 태그안에서 사용해야 하고 반드시 최상단에 선언해야한다.
+    -CSS파일에 오류가 있는경우 다운로드 하지 않는다.
+    */
+    @import url('./style/import.css');
+    .content{
+        background-color: black; color:red;
+    }
+    /* 
+    @media
+    -해당 웹페이지를 디바이스의 종류에 따라 각각 다르게 화면을
+    구성할수 있게 해주는 기능을 가지고 있다.
+    - 스크린용과 프린트용을 구분해야할때 사용한다.
+    */
+    @media screen{
+        .content{
+            background-color: black; color: white;
+        }
+    }
+    @media print{
+        .content{
+            background-color: red; color:yellow;
+        }
+    }
+</style>
+<body>
+    <h2>media 속성</h2>
+    <div class="content">
+        <p>
+            <h3>신규확진 146명, 나흘째 세자리…지역 113명-해외 33명 동시확산(종합)</h3>
+
+            지역감염과 해외유입 사례가 동시에 확산하면서 11일 국내 신종 코로나바이러스 <br>
+            감염증(코로나19) 신규 확진자 수는 150명에 육박했다. <br>
+            전날(100명)보다 대폭 늘어나면서 나흘 연속 세 자릿수를 기록했다. <br>
+            보통 한 주간 확진자 발생 흐름을 보면 검사 건수가 평일 대비 절반가량으로 <br>
+            줄어드는 주말과 휴일은 물론 주 초반까지 확진자가 감소하지만, <br>
+            이번에는 지난 주말부터 주 중반으로 접어드는 이날까지 나흘째 100명대를 웃돌고 있다.
+        </p>
+    </div>
+</body>
+</html>
