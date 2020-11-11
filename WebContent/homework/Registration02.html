@@ -5,26 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration02.html</title>
     <style>
-        table{margin: 5%;  box-sizing: border-box}
-        tr{height: 40px;}
-        td{font-weight: bold;}
-        input[type=text]{height: 30px; width: 400px;}
-        input[type=password]{height: 30px; width: 150px;}
-        .notice{font-size: 0.7em;}
-        .number{height: 35px; width: 100px;}
+        .mainform{background-color: whitesmoke; width: 700px; padding: 10px;}
+        table{border: 1px solid grey; border-top: 2px solid darkblue;
+                    background-color: white; width: 99%;}
+        tr{height: 50px;}
+        td:first-child{font-weight: bold; padding-left: 80px; padding-right: 5px;}
+        input{border: 1px solid lightgray;}
+        input[type=text]{height: 30px; width: 320px;}
+        input[type=password]{height: 30px; width: 320px;}
+        input[type=submit]{border:0; width: 100px; height: 33px; color: white; background-color: #343434; font-weight: bold;}
+        .notice{font-size: 0.8em; letter-spacing: 0.1px;}
+        .email{height: 35px; width: 80px; border: 1px solid lightgray;}
+        .number{height: 35px; width: 80px; border: 1px solid lightgray;}
         .selectinfo{font-size: 0.8em;}
-        form{display: inline;}
-        span{color:red}
+        .inform{display: inline;}
+        .firsttable span{color:red}
     </style>
 </head>
 <body>
-    <form>
-    <table border="1">
+    <form class="mainform">
+        <p style="text-align: right; font-size: 0.8em;">*필수입력사항</p>
+    <table class="firsttable">
         <tr style="border-bottom: blue;" class="start" >
-            <td colspan="3">*필수입력사항</td>
-        </tr>
-        <tr>
-            <td class="keypoint"><span>*</span>아이디</td>
+            <td><span>*</span>아이디</td>
             <td>
                 <input type="text">
                 <input type="submit" value="중복확인">
@@ -32,54 +35,58 @@
         </tr>
         <tr class="notice">
             <td></td>
-            <td colspan="2">※3~15자의 영문과 숫자만 가능합니다.</td>
+            <td style="color: dimgray">※3~15자의 영문과 숫자만 가능합니다.</td>
         </tr>
         <tr>
-            <td class="keypoint"><span>*</span>비밀번호</td>
+            <td><span>*</span>비밀번호</td>
             <td><input type="password"></td>
         </tr>
         <tr class="notice">
             <td></td>
-            <td>※영문/숫자/특수문자 조합 6~20자이상 입력해주세요.(아이디/전화번호사용 불가)
+            <td style="color: dimgray;">※ 영문/숫자/특수문자 조합 6~20자이상 입력해주세요.(아이디/전화번호사용 불가)
                 <br>
                 ※ 1234** 비밀번호는 홈페이지 사용에 제한됩니다.
             </td>
         </tr>
         <tr>
-            <td class="keypoint"><span>*</span>비밀번호 확인</td>
+            <td><span>*</span>비밀번호 확인</td>
             <td><input type="password"></td>
         </tr>
         <tr>
-            <td class="keypoint"><span>*</span>이름</td>
+            <td><span>*</span>이름</td>
             <td>
                 <input type="text">
+                <input type="radio" name="gender" value="Y" checked="checked">
+                <input type="radio" name="gender" value="M">
             </td>
         </tr>
         <tr>
-            <td class="keypoint"><span>*</span>생년월일</td>
+            <td><span>*</span>생년월일</td>
             <td>
-               <input type="text">
+               <input type="text" placeholder="2019-05-20" style="width: 200px;">
+               <input type="image" src="../images/date.JPG" width="33px" height="33px" style="vertical-align: bottom;">
             </td>
         </tr>
         <tr>
-            <td rowspan="2" class="keypoint"><span>*</span>주소</td>
+            <td><span>*</span>주소</td>
             <td>
-                <input type="text">
+                <input type="text" style="width: 150px;">
                 <input type="submit" value="우편번호찾기">
             </td>
         </tr>
         <tr>
+            <td></td>
             <td>
-                <input type="text">
-                <input type="text">
+                <input type="text" style="width: 240px;">
+                <input type="text" style="width: 180px;">
             </td>
         </tr>
         <tr>
-            <td class="keypoint"><span>*</span>이메일
+            <td><span>*</span>이메일
             <td>
-                <input type="text"> @ <input type="text">
-                <form>
-                    <select name="email">
+                <input type="text"style="width: 130px;"> @ <input type="text"style="width: 130px;">
+                <form class="inform">
+                    <select name="email" class="email">
                         <option value="직접입력">직접입력</option>
                         <option value="구글">gmail.com</option>
                         <option value="네이버">naver.com</option>
@@ -92,64 +99,77 @@
         <tr>
             <td class="keypoint"><span>*</span>휴대폰번호</td>
             <td>
-                <form>
+                <form class="inform">
                     <select name="Number" class="number">
                         <option value="010">010</option>
                         <option value="011">011</option>
                         <option value="016">016</option>
                         <option value="017">017</option>
                         <option value="019">019</option>
-                    </select>&nbsp -
+                    </select>&nbsp -&nbsp
                 </form>
-            <input type="text" maxlength="4" width="150px">&nbsp -
-            <input type="text" maxlength="4" >
+            <input type="text" maxlength="4" style="width: 100px;">&nbsp -&nbsp
+            <input type="text" maxlength="4" style="width: 100px;">
             </td>
         </tr>
         <tr>
             <td>전화번호</td>
             <td>
-                <form>
+                <form class="inform">
                     <select name="Number" class="number">
                         <option value="서울">02</option>
                         <option value="경기">031</option>
                         <option value="부산">051</option>
                         <option value="대구">053</option>
-                    </select>&nbsp -
+                    </select>&nbsp -&nbsp
                 </form>
-            <input type="text" maxlength="4" >&nbsp -
-            <input type="text" maxlength="4" >
+            <input type="text" maxlength="4" style="width: 100px;">&nbsp -&nbsp
+            <input type="text" maxlength="4" style="width: 100px;">
         </td>
         </tr>
         <tr>
             <td>출판계약일</td>
-            <td><input type="text"></td>
+            <td><input type="text">
+            <input type="image" src="../images/date.JPG" width="33px" height="33px" style="vertical-align: bottom;">
+            </td>
         </tr>
         <tr>
             <td>출판종료일</td>
-            <td><input type="text"></td>
+            <td><input type="text">
+            <input type="image" src="../images/date.JPG" width="33px" height="33px" style="vertical-align: bottom;">
+            </td>
         </tr>
         <tr>
             <td>선택정보</td>
             <td class="selectinfo">
-                <input type="checkbox" value="자바출판">자바출판
-                <input type="checkbox" value="반기획출판">반기획출판
-                <input type="checkbox" value="프리미엄출판">프리미엄출판
-                <input type="checkbox" value="출판컨설팅">출판컨설팅
+                <input type="checkbox" value="java">자바출판
+                <input type="checkbox" value="ban">반기획출판
+                <input type="checkbox" value="premium">프리미엄출판
+                <input type="checkbox" value="consult">출판컨설팅
                 <br>
-                <input type="checkbox" value="기획출판">기획출판
-                <input type="checkbox" value="미정">미정
+                <input type="checkbox" value="plan">기획출판
+                <input type="checkbox" value="unknown">미정
             </td>
         </tr>
+    </table>
+    <span><b>이용약관 동의*</b></span>
+    <span style="font-size: 0.8em;">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</span>
+    <table>
         <tr>
-            <td></td>
-            <td></td>
+            <td>
+                <input type="checkbox" name="" id=""> <b>전체 동의</b>
+                <br><br>&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="" id=""> 이용약관
+                <br>&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="" id=""> 개인정보처리방침
+                <br>&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="" id=""> 이벤트 및 혜택 알림 수신
+                <br>&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="" id=""> SMS
+                <input type="checkbox" name="" id=""> 이메일
+            </td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-        </tr>
-</table>
+    </table>
 </form>
 </body>
 </html>
