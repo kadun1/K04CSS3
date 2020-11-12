@@ -29,10 +29,10 @@
         button{color: black !important; border:1px solid lightgray; background-color: white;
              padding:6.5px 15px; vertical-align:middle;}
         .genderw{color:white !important; background-color: #274069;}
-        p{text-align: right; font-size: 0.8em; padding-right: 10px; margin-bottom: 5px;}
+        p{text-align: right; font-size: 0.7em; padding-right: 10px; margin-bottom: 5px;}
         img{vertical-align: middle;}
         .secondtable input[type=checkbox]{margin-top: 10px;}
-        .firsttable .notice{height: 40px;}
+        .firsttable .notice{height: 40px; font-weight: bold;}
         .regist{text-align: center; padding-top: 20px; padding-bottom: 10px;}
         .regist input{background-color: #274069; height: 50px; width: 200px;}
     </style>
@@ -44,8 +44,8 @@
         <tr class="start" >
             <td><span>*</span> 아이디</td>
             <td>
-                <input type="text">
-                <input type="submit" value="중복확인">
+                <input type="text" name="id">
+                <input type="submit" value="중복확인" name="idcheck">
             </td>
         </tr>
         <tr class="notice">
@@ -54,7 +54,7 @@
         </tr>
         <tr>
             <td><span>*</span> 비밀번호</td>
-            <td><input type="password"></td>
+            <td><input type="password" name="password"></td>
         </tr>
         <tr class="notice">
             <td></td>
@@ -65,14 +65,14 @@
         </tr>
         <tr>
             <td><span>*</span> 비밀번호 확인</td>
-            <td><input type="password"></td>
+            <td><input type="password" name="passwordcheck"></td>
         </tr>
         <tr>
             <td><span>*</span> 이름</td>
             <td>
-                <input type="text">
-                <button class="genderw">여</button>
-                <button class="genderm">남</button>
+                <input type="text" name="">
+                <button class="genderw" name="gender" value="Y">여</button>
+                <button class="genderm" name="gender" value="M">남</button>
                 <!-- <input type="radio" name="gender" value="Y" checked="checked">
                 <input type="radio" name="gender" value="M"> -->
             </td>
@@ -80,28 +80,29 @@
         <tr>
             <td><span>*</span> 생년월일</td>
             <td>
-               <input type="text" placeholder="2019-05-20" style="width: 200px;">
+               <input type="text" name="birthday" placeholder="2019-05-20" style="width: 200px;">
                <img src="../images/date.JPG" width="33px" height="33px">
             </td>
         </tr>
         <tr>
             <td><span>*</span> 주소</td>
             <td>
-                <input type="text" style="width: 160px;">
-                <input type="submit" value="우편번호찾기">
+                <input type="text" name="resultad" style="width: 160px;">
+                <input type="submit" name="searchad" value="우편번호찾기">
             </td>
         </tr>
         <tr>
             <td></td>
             <td>
-                <input type="text" style="width: 240px;">
-                <input type="text" style="width: 180px;">
+                <input type="text" name="address1" style="width: 240px;">
+                <input type="text" name="address2" style="width: 180px;">
             </td>
         </tr>
         <tr>
             <td><span>*</span> 이메일
             <td>
-                <input type="text"style="width: 130px;"> @ <input type="text"style="width: 130px;">
+                <input type="text" name="emailid" style="width: 130px;"> @
+                     <input type="text" name="emailad" style="width: 130px;">
                 <form class="inform">
                     <select name="email" class="email">
                         <option value="user">직접입력</option>
@@ -117,7 +118,7 @@
             <td class="keypoint"><span>*</span> 휴대폰번호</td>
             <td>
                 <form class="inform">
-                    <select name="Number" class="number">
+                    <select name="phoneNum" class="number">
                         <option value="010">010</option>
                         <option value="011">011</option>
                         <option value="016">016</option>
@@ -125,15 +126,15 @@
                         <option value="019">019</option>
                     </select>&nbsp -&nbsp
                 </form>
-            <input type="text" maxlength="4" style="width: 100px;">&nbsp -&nbsp
-            <input type="text" maxlength="4" style="width: 100px;">
+            <input type="text" name="midNum" maxlength="4" style="width: 100px;">&nbsp -&nbsp
+            <input type="text" name="lastNum" maxlength="4" style="width: 100px;">
             </td>
         </tr>
         <tr>
             <td>전화번호</td>
             <td>
                 <form class="inform">
-                    <select name="Number" class="number">
+                    <select name="lineNum" class="number">
                         <option value="net">070</option>
                         <option value="seoul">02</option>
                         <option value="gg">031</option>
@@ -141,32 +142,32 @@
                         <option value="daegu">053</option>
                     </select>&nbsp -&nbsp
                 </form>
-            <input type="text" maxlength="4" style="width: 100px;">&nbsp -&nbsp
-            <input type="text" maxlength="4" style="width: 100px;">
+            <input type="text" name="linemidNum" maxlength="4" style="width: 100px;">&nbsp -&nbsp
+            <input type="text" name="linelastNum" maxlength="4" style="width: 100px;">
         </td>
         </tr>
         <tr>
             <td >출판계약일</td>
-            <td><input type="text" style="width:200px">
+            <td><input type="text" name="startday" style="width:200px">
             <img src="../images/date.JPG" width="33px" height="33px">
             </td>
         </tr>
         <tr>
             <td>출판종료일</td>
-            <td><input type="text" style="width:200px">
+            <td><input type="text" name="lastday" style="width:200px">
             <img src="../images/date.JPG" width="33px" height="33px">
             </td>
         </tr>
         <tr>
             <td>선택정보</td>
             <td class="selectinfo">
-                <input type="checkbox" value="java">자바출판&nbsp;
-                <input type="checkbox" value="ban">반기획출판&nbsp;
-                <input type="checkbox" value="premium">프리미엄출판&nbsp;
-                <input type="checkbox" value="consult">출판컨설팅
+                <input type="checkbox" name="select" value="java">자바출판&nbsp;
+                <input type="checkbox" name="select" value="ban">반기획출판&nbsp;
+                <input type="checkbox" name="select" value="premium">프리미엄출판&nbsp;
+                <input type="checkbox" name="select" value="consult">출판컨설팅
                 <br>
-                <input type="checkbox" value="plan">기획출판&nbsp;
-                <input type="checkbox" value="unknown">미정
+                <input type="checkbox" name="select" value="plan">기획출판&nbsp;
+                <input type="checkbox" name="select" value="unknown">미정
             </td>
         </tr>
     </table>
@@ -176,7 +177,7 @@
         <tr>
             <td>
                 <input type="checkbox" name="all" value="all"> <b>전체 동의</b>
-                <br><br>&nbsp;&nbsp;&nbsp;
+                <br>&nbsp;&nbsp;&nbsp;
                 <input type="checkbox" name="sel" value="use"> 이용약관 <span class="notice">(필수)</span> <span class="menual"> 약관보기></span> 
                 <br>&nbsp;&nbsp;&nbsp;
                 <input type="checkbox" name="sel" value="personal"> 개인정보처리방침 <span class="notice">(필수)</span> <span class="menual"> 약관보기></span> 
@@ -189,7 +190,7 @@
             </td>
         </tr>
     </table>
-    <p class="regist"><input type="submit" value="가입하기"></p>
+    <p class="regist"><input type="submit" name="regist" value="가입하기"></p>
 </form>
 </body>
 </html>
