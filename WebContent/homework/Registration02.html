@@ -5,29 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration02.html</title>
     <style>
-        .mainform{background-color: whitesmoke; width: 700px; padding: 10px;}
+        .mainform{background-color: whitesmoke; width: 700px; padding-left: 5px;}
         table{border: 1px solid grey; border-top: 2px solid darkblue;
-                    background-color: white; width: 99%;}
+                background-color: white; width: 99%; margin-bottom: 20px;
+                padding-top: 20px; padding-bottom: 20px;}
+        .secondtable{padding-top: 10px; padding-left: 80px; padding-bottom: 10px;
+                font-size: 0.9em;}                    
         tr{height: 50px;}
-        td:first-child{font-weight: bold; padding-left: 80px; padding-right: 5px;}
+        .firsttable td:first-child{font-weight: bold; padding-left: 80px; padding-right: 5px;} 
         input{border: 1px solid lightgray;}
-        input[type=text]{height: 30px; width: 320px;}
-        input[type=password]{height: 30px; width: 320px;}
-        input[type=submit]{border:0; width: 100px; height: 33px; color: white; background-color: #343434; font-weight: bold;}
-        .notice{font-size: 0.8em; letter-spacing: 0.1px;}
-        .email{height: 35px; width: 80px; border: 1px solid lightgray;}
-        .number{height: 35px; width: 80px; border: 1px solid lightgray;}
-        .selectinfo{font-size: 0.8em;}
+        input[type=text]{height: 30px; width: 320px; padding-left: 5px;}
+        input[type=password]{height: 30px; width: 320px; padding-left: 5px;}
+        input[type=submit]{border:0; width: 100px; height: 33px; color: white;
+             background-color: #343434; font-weight: bold; vertical-align:middle;}
+        .notice{font-size: 0.8em; letter-spacing: -0.8px; color: dimgray;}
+        .menual{font-size: 0.7em; color: darkblue;}
+        .email{height: 35px; width: 130px; border: 1px solid lightgray;}
+        .number{height: 35px; width: 80px; border: 1px solid lightgray; padding-left: 5px;}
+        .selectinfo{font-size: 0.8em; color: dimgray;}
+        .selectinfo input{margin-top: 10px;}
         .inform{display: inline;}
         .firsttable span{color:red}
+        button{color: black !important; border:1px solid lightgray; background-color: white;
+             padding:6.5px 15px; vertical-align:middle;}
+        .genderw{color:white !important; background-color: #274069;}
+        p{text-align: right; font-size: 0.8em; padding-right: 10px; margin-bottom: 5px;}
+        img{vertical-align: middle;}
+        .secondtable input[type=checkbox]{margin-top: 10px;}
+        .firsttable .notice{height: 40px;}
+        .regist{text-align: center; padding-top: 20px; padding-bottom: 10px;}
+        .regist input{background-color: #274069; height: 50px; width: 200px;}
     </style>
 </head>
 <body>
     <form class="mainform">
-        <p style="text-align: right; font-size: 0.8em;">*필수입력사항</p>
+        <p>*필수입력사항</p>
     <table class="firsttable">
-        <tr style="border-bottom: blue;" class="start" >
-            <td><span>*</span>아이디</td>
+        <tr class="start" >
+            <td><span>*</span> 아이디</td>
             <td>
                 <input type="text">
                 <input type="submit" value="중복확인">
@@ -35,42 +50,44 @@
         </tr>
         <tr class="notice">
             <td></td>
-            <td style="color: dimgray">※3~15자의 영문과 숫자만 가능합니다.</td>
+            <td>※3~15자의 영문과 숫자만 가능합니다.</td>
         </tr>
         <tr>
-            <td><span>*</span>비밀번호</td>
+            <td><span>*</span> 비밀번호</td>
             <td><input type="password"></td>
         </tr>
         <tr class="notice">
             <td></td>
-            <td style="color: dimgray;">※ 영문/숫자/특수문자 조합 6~20자이상 입력해주세요.(아이디/전화번호사용 불가)
+            <td>※ 영문/숫자/특수문자 조합 6~20자이상 입력해주세요.(아이디/전화번호사용 불가)
                 <br>
                 ※ 1234** 비밀번호는 홈페이지 사용에 제한됩니다.
             </td>
         </tr>
         <tr>
-            <td><span>*</span>비밀번호 확인</td>
+            <td><span>*</span> 비밀번호 확인</td>
             <td><input type="password"></td>
         </tr>
         <tr>
-            <td><span>*</span>이름</td>
+            <td><span>*</span> 이름</td>
             <td>
                 <input type="text">
-                <input type="radio" name="gender" value="Y" checked="checked">
-                <input type="radio" name="gender" value="M">
+                <button class="genderw">여</button>
+                <button class="genderm">남</button>
+                <!-- <input type="radio" name="gender" value="Y" checked="checked">
+                <input type="radio" name="gender" value="M"> -->
             </td>
         </tr>
         <tr>
-            <td><span>*</span>생년월일</td>
+            <td><span>*</span> 생년월일</td>
             <td>
                <input type="text" placeholder="2019-05-20" style="width: 200px;">
-               <input type="image" src="../images/date.JPG" width="33px" height="33px" style="vertical-align: bottom;">
+               <img src="../images/date.JPG" width="33px" height="33px">
             </td>
         </tr>
         <tr>
-            <td><span>*</span>주소</td>
+            <td><span>*</span> 주소</td>
             <td>
-                <input type="text" style="width: 150px;">
+                <input type="text" style="width: 160px;">
                 <input type="submit" value="우편번호찾기">
             </td>
         </tr>
@@ -82,22 +99,22 @@
             </td>
         </tr>
         <tr>
-            <td><span>*</span>이메일
+            <td><span>*</span> 이메일
             <td>
                 <input type="text"style="width: 130px;"> @ <input type="text"style="width: 130px;">
                 <form class="inform">
                     <select name="email" class="email">
-                        <option value="직접입력">직접입력</option>
-                        <option value="구글">gmail.com</option>
-                        <option value="네이버">naver.com</option>
-                        <option value="다음">daum.net</option>
-                        <option value="네이트">nate.com</option>
+                        <option value="user">직접입력</option>
+                        <option value="google">gmail.com</option>
+                        <option value="naver">naver.com</option>
+                        <option value="daum">daum.net</option>
+                        <option value="nate">nate.com</option>
                     </select>
                 </form>
             </td>
         </tr>
         <tr>
-            <td class="keypoint"><span>*</span>휴대폰번호</td>
+            <td class="keypoint"><span>*</span> 휴대폰번호</td>
             <td>
                 <form class="inform">
                     <select name="Number" class="number">
@@ -117,10 +134,11 @@
             <td>
                 <form class="inform">
                     <select name="Number" class="number">
-                        <option value="서울">02</option>
-                        <option value="경기">031</option>
-                        <option value="부산">051</option>
-                        <option value="대구">053</option>
+                        <option value="net">070</option>
+                        <option value="seoul">02</option>
+                        <option value="gg">031</option>
+                        <option value="busan">051</option>
+                        <option value="daegu">053</option>
                     </select>&nbsp -&nbsp
                 </form>
             <input type="text" maxlength="4" style="width: 100px;">&nbsp -&nbsp
@@ -128,48 +146,50 @@
         </td>
         </tr>
         <tr>
-            <td>출판계약일</td>
-            <td><input type="text">
-            <input type="image" src="../images/date.JPG" width="33px" height="33px" style="vertical-align: bottom;">
+            <td >출판계약일</td>
+            <td><input type="text" style="width:200px">
+            <img src="../images/date.JPG" width="33px" height="33px">
             </td>
         </tr>
         <tr>
             <td>출판종료일</td>
-            <td><input type="text">
-            <input type="image" src="../images/date.JPG" width="33px" height="33px" style="vertical-align: bottom;">
+            <td><input type="text" style="width:200px">
+            <img src="../images/date.JPG" width="33px" height="33px">
             </td>
         </tr>
         <tr>
             <td>선택정보</td>
             <td class="selectinfo">
-                <input type="checkbox" value="java">자바출판
-                <input type="checkbox" value="ban">반기획출판
-                <input type="checkbox" value="premium">프리미엄출판
+                <input type="checkbox" value="java">자바출판&nbsp;
+                <input type="checkbox" value="ban">반기획출판&nbsp;
+                <input type="checkbox" value="premium">프리미엄출판&nbsp;
                 <input type="checkbox" value="consult">출판컨설팅
                 <br>
-                <input type="checkbox" value="plan">기획출판
+                <input type="checkbox" value="plan">기획출판&nbsp;
                 <input type="checkbox" value="unknown">미정
             </td>
         </tr>
     </table>
     <span><b>이용약관 동의*</b></span>
-    <span style="font-size: 0.8em;">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</span>
-    <table>
+    <span style="font-size: 0.7em; letter-spacing: -0.5px;">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</span>
+    <table class="secondtable">
         <tr>
             <td>
-                <input type="checkbox" name="" id=""> <b>전체 동의</b>
+                <input type="checkbox" name="all" value="all"> <b>전체 동의</b>
                 <br><br>&nbsp;&nbsp;&nbsp;
-                <input type="checkbox" name="" id=""> 이용약관
+                <input type="checkbox" name="sel" value="use"> 이용약관 <span class="notice">(필수)</span> <span class="menual"> 약관보기></span> 
                 <br>&nbsp;&nbsp;&nbsp;
-                <input type="checkbox" name="" id=""> 개인정보처리방침
+                <input type="checkbox" name="sel" value="personal"> 개인정보처리방침 <span class="notice">(필수)</span> <span class="menual"> 약관보기></span> 
                 <br>&nbsp;&nbsp;&nbsp;
-                <input type="checkbox" name="" id=""> 이벤트 및 혜택 알림 수신
-                <br>&nbsp;&nbsp;&nbsp;
-                <input type="checkbox" name="" id=""> SMS
-                <input type="checkbox" name="" id=""> 이메일
+                <input type="checkbox" name="sel" value="event"> 이벤트 및 혜택 알림 수신 <span class="notice">(선택)</span>
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="sel" value="SMS"> SMS
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="sel" value="email"> 이메일
             </td>
         </tr>
     </table>
+    <p class="regist"><input type="submit" value="가입하기"></p>
 </form>
 </body>
 </html>
