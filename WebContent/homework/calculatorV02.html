@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-weight: bold;
+        color: white;
+    }
+    table {
+        border-radius: 10px;
+        border-spacing: 5px;
+        background-color: #DDDDDD;
+        box-sizing: border-box;
+    }
+    td {
+        border-radius: 10px;
+        height: 50px;
+        width: 100px;
+    }
+    input {
+        border-radius: 10px;
+        width: 100%; height:100%;
+        border:0;
+        font-size: 20px;
+        background:none;
+    }
+    tr{
+        background-color: #373737;
+    }
+    td:last-child{
+        background-color: #FA960A;
+    }
+    .test>td{
+        background-color: #7B7B7B;
+        
+    }
+    #screen{
+        background-color: #70C738;
+        text-align: right;
+        font-size: 40px; color: black;
+        height: 80px;
+        padding-right: 3%;
+    }
+</style>
+<script>
+    function putNumber(put){
+
+        var cal = document.getElementById("screen").innerHTML;
+        var hiddenCal = document.getElementById("hidden").innerHTML;
+
+        if(put=="BackSpace"){
+            document.getElementById("screen").innerHTML=(cal.substr(0, cal.length-1));
+            document.getElementById("hidden").innerHTML=(hiddenCal.substr(0, hiddenCal.length-1));
+        }
+        else if(put=="="){
+           document.getElementById("screen").innerHTML=eval(hiddenCal);
+        }
+        else if(put=="C"){
+            location.reload();
+        }
+        else if(put=="+"||put=="-"||put=="*"||put=="/"){
+            if(hiddenCal[hiddenCal.length-1]=="+"||
+                hiddenCal[hiddenCal.length-1]=="-"||
+                hiddenCal[hiddenCal.length-1]=="*"||
+                hiddenCal[hiddenCal.length-1]=="/"){
+                document.getElementById("hidden").innerHTML=
+                    hiddenCal.substr(0, hiddenCal.length-1)+put;
+            }
+            else{
+                document.getElementById("hidden").innerHTML += put;
+            }
+        }
+        else{
+            document.getElementById("screen").innerHTML = put;
+            document.getElementById("hidden").innerHTML += put;
+        }
+    }
+
+</script>
+<body>
+    <h2>계산기</h2>
+    <table>
+        <tr>
+            <td id="hidden" hidden></td>
+        </tr>
+        <tr>
+            <td id="screen" colspan="4"></td>
+        </tr>
+        <tr class="test">
+            <td colspan="2"><input type=button value="BackSpace"
+                 onclick="putNumber('BackSpace')";></td>
+            <td colspan="2"><input type=button value="C" onclick="putNumber('C')";></td>
+        </tr>
+        <tr>
+            <td><input type=button value="1" onclick="putNumber('1')";></td>
+            <td><input type=button value="2" onclick="putNumber('2')";></td>
+            <td><input type=button value="3" onclick="putNumber('3')";></td>
+            <td><input type=button value="/" onclick="putNumber('/')";></td>
+        </tr>
+        <tr>
+            <td><input type=button value="4" onclick="putNumber('4')";></td>
+            <td><input type=button value="5" onclick="putNumber('5')";></td>
+            <td><input type=button value="6" onclick="putNumber('6')";></td>
+            <td><input type=button value="x" onclick="putNumber('*')";></td>
+        </tr>
+        <tr>
+            <td><input type=button value="7" onclick="putNumber('7')";></td>
+            <td><input type=button value="8" onclick="putNumber('8')";></td>
+            <td><input type=button value="9" onclick="putNumber('9')";></td>
+            <td><input type=button value="+" onclick="putNumber('+')";></td>
+        </tr>
+        <tr>
+            <td><input type=button value="=" onclick="putNumber('=')";></td>
+            <td><input type=button value="0" onclick="putNumber('0')";></td>
+            <td><input type=button value="." onclick="putNumber('.')";></td>
+            <td><input type=button value="-" onclick="putNumber('-')";></td>
+        </tr>
+    </table>
+</body>
+</html>
